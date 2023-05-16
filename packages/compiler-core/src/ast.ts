@@ -27,27 +27,43 @@ export const enum Namespaces {
 
 export const enum NodeTypes {
   ROOT,
+  // element
   ELEMENT,
+  // 文本
   TEXT,
+  // 注释
   COMMENT,
+  // 简单表达式，需要过 babel转换
   SIMPLE_EXPRESSION,
+  // 插值 {{ }}
   INTERPOLATION,
+  // 属性
   ATTRIBUTE,
+  // 指令
   DIRECTIVE,
   // containers
+  // 组合表达表达式
   COMPOUND_EXPRESSION,
   IF,
   IF_BRANCH,
   FOR,
   TEXT_CALL,
   // codegen
+  // vnode
   VNODE_CALL,
+  // 调用函数的表达式
   JS_CALL_EXPRESSION,
+  // js对象
   JS_OBJECT_EXPRESSION,
+  // 属性
   JS_PROPERTY,
+  // 数组
   JS_ARRAY_EXPRESSION,
+  // 生成剪头函数
   JS_FUNCTION_EXPRESSION,
+  // 条件表达式
   JS_CONDITIONAL_EXPRESSION,
+  // 缓存表达式
   JS_CACHE_EXPRESSION,
 
   // ssr codegen
