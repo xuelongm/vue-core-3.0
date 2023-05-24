@@ -75,6 +75,7 @@ export const enum NodeTypes {
   JS_RETURN_STATEMENT
 }
 
+// element类型
 export const enum ElementTypes {
   ELEMENT,
   COMPONENT,

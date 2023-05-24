@@ -280,6 +280,7 @@ export function trackEffects(
 
   if (shouldTrack) {
     dep.add(activeEffect!)
+    // 为清空依赖做准备
     activeEffect!.deps.push(dep)
     if (__DEV__ && activeEffect!.onTrack) {
       activeEffect!.onTrack(

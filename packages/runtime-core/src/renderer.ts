@@ -1290,7 +1290,7 @@ function baseCreateRenderer(
       instance.vnode = n2
     }
   }
-
+  
   const setupRenderEffect: SetupRenderEffectFn = (
     instance,
     initialVNode,
@@ -1367,6 +1367,7 @@ function baseCreateRenderer(
           if (__DEV__) {
             startMeasure(instance, `render`)
           }
+          // 调用render
           const subTree = (instance.subTree = renderComponentRoot(instance))
           if (__DEV__) {
             endMeasure(instance, `render`)

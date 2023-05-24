@@ -179,6 +179,7 @@ function doCompileTemplate({
     const assetOptions = normalizeOptions(transformAssetUrls)
     nodeTransforms = [
       createAssetUrlTransformWithOptions(assetOptions),
+      // 处理响应式图片 <img srcset=>
       createSrcsetTransformWithOptions(assetOptions)
     ]
   } else if (transformAssetUrls !== false) {

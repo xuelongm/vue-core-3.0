@@ -38,12 +38,14 @@ export function getBaseTransformPreset(
         ? [
             // order is important
             trackVForSlotScopes,
+            // 转换表达式，主要是属性和插值
             transformExpression
           ]
         : __BROWSER__ && __DEV__
         ? [transformExpression]
         : []),
       transformSlotOutlet,
+      // 只针对element进行转换，转换为VNODE_CALL
       transformElement,
       trackSlotScopes,
       transformText
